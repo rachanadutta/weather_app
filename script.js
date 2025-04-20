@@ -58,8 +58,8 @@ button.addEventListener("click", () =>{
             
 
             document.getElementById("temperature").innerHTML =`${data.main.temp}<sup>°C</sup>`;
-            document.getElementById("humidity-value").textContent =`${data.main.humidity}`;
-            document.getElementById("wind-value").textContent =`${data.wind.speed}`;
+            document.getElementById("humidity-value").textContent =`${data.main.humidity}%`;
+            document.getElementById("wind-value").textContent =`${data.wind.speed}Km/H`;
             document.getElementById("description").textContent =`${data.weather[0].description}`;
 
             

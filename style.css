@@ -28,7 +28,7 @@ body{
 }
 @media (max-width: 768px) {
     .welcome h1 {
-        font-size: 25px; /* Reduce font size on smaller screens */
+        font-size: 28px; /* Reduce font size on smaller screens */
         margin-top: 60px;
     }
 }
@@ -87,12 +87,14 @@ body{
     max-width: 100%;
     max-height: 80%;
     object-fit: contain;
+    border-radius: 10px;
 }
 .temp {
     font-size: 20px;
     font-weight: 700;
     text-align: center;
-    color: black;
+    color: rgb(44, 43, 43);
+    font-family: consolas;
 }
 
 .details {
@@ -111,6 +113,8 @@ body{
 #humidity , #wind{
     font-size: 20px;
     font-weight: 600;
+    font-family: consolas;
+    color:rgb(44, 43, 43);
 }
 .hidden{
     display: none !important;
