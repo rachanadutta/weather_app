@@ -57,7 +57,7 @@ button.addEventListener("click", () =>{
 
             
 
-            document.getElementById("temperature").textContent =`${data.main.temp}`;
+            document.getElementById("temperature").innerHTML =`${data.main.temp}<sup>°C</sup>`;
             document.getElementById("humidity-value").textContent =`${data.main.humidity}`;
             document.getElementById("wind-value").textContent =`${data.wind.speed}`;
             document.getElementById("description").textContent =`${data.weather[0].description}`;
