@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <video autoplay muted loop id="background-video" >
+        <source src="" type="video/mp4">
+    </video>
+    <div class="card">
+        <div class="search">
+            <input  id="input" type="text" placeholder="Enter your City" spellcheck="false" autocomplete="off">
+            <button id="button"><i class="ri-search-line"></i></button>
+        </div>
+        <div class="welcome">
+            <h1>
+                Welcome <br>to <br>Weather App :)
+            </h1>
+        </div>
+        
+        <div class="weather hidden">
+            <img id="weather-img" />
+        </div>
+        <div class="temp hidden">
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
+        <div class="details hidden">
+            <div id="humidity">
+                <i class="ri-water-percent-fill"></i>
+                <p id="humidity-value"></p>
+                <p>humidity</p>
+            </div>
+            <div id="wind">
+                <i class="ri-windy-line"></i>
+                <p id="wind-value"></p>
+                <p>Wind Speed</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
