@@ -67,5 +67,44 @@ button.addEventListener("click", () =>{
 
         })
 })
+input.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        const city = input.value.trim();
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data =>{
+            
+            console.log(data);
+            console.log(data.main.temp);
+            document.querySelector(".welcome").classList.add("hidden");
+            document.querySelector(".weather").classList.remove("hidden");
+            document.querySelector(".temp").classList.remove("hidden");
+            document.querySelector(".details").classList.remove("hidden");
+            const condition= data.weather[0].main.toLowerCase();
+            const imgurl= weatherImages[condition] || weatherImages.clear;
+            const bgcolor= colors[condition];
+            const video=animations[condition] || animations.clear;
+            document.body.style.background = "none";
+            document.querySelector(".card").style.backgroundColor=bgcolor;
+            document.getElementById("weather-img").src=imgurl;
+            document.getElementById("background-video").querySelector("source").src=video;
+            document.getElementById("background-video").load();
+
+
+            
+
+            document.getElementById("temperature").innerHTML =`${data.main.temp}<sup>°C</sup>`;
+            document.getElementById("humidity-value").textContent =`${data.main.humidity}%`;
+            document.getElementById("wind-value").textContent =`${data.wind.speed}Km/H`;
+            document.getElementById("description").textContent =`${data.weather[0].description}`;
+
+            
+
+
+        })
+    }
+})
 
 
